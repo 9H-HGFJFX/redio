@@ -1,30 +1,38 @@
-<script setup>
-import HelloWorld from './components/HelloWorld.vue'
-</script>
-
+<!-- src/App.vue -->
 <template>
-  <div>
-    <a href="https://vite.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
+  <div class="video-page">
+    <h1>video-page</h1>
+    <div class="video-wrapper">
+      <video 
+        controls 
+        preload="metadata" 
+        src="/videos/demo.mp4" 
+        width="100%" 
+        max-width="1000px"
+      ></video>
+    </div>
+    <div class="video-info">
+      <h2>video-info</h2>
+      <p>show</p>
+    </div>
   </div>
-  <HelloWorld msg="Vite + Vue" />
 </template>
 
 <style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+/* 样式与之前保持一致 */
+.video-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+.video-wrapper {
+  margin: 30px 0;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px #0000001a;
 }
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
+.video-info {
+  color: #333;
+  line-height: 1.6;
 }
 </style>
